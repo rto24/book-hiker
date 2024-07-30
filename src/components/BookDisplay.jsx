@@ -47,7 +47,7 @@ const BookDisplay = () => {
           const rating = obj[keys[3]]; 
 
           //pass down each constant to UserBooks when made
-          <UserBook title={title} message={message} rating={rating} key={index}/>
+          return <UserBook title={title} message={message} rating={rating} key={index}/>
         })}
 
       </div>  

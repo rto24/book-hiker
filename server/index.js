@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.status(200).send(HTML_FILE);
 });
 
-app.use('/home', homeRouter); // home is when the user first logs in
+app.use('/api/home', homeRouter); // home is when the user first logs in
 
 app.listen(port, function () {
   console.log('App listening on port: ' + port);
