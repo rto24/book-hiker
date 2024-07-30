@@ -44,6 +44,9 @@ const BookCreator = () => {
         } else {
           console.log('Error uhoh', response.statusText);
         }
+        setBookTitleInput('');
+        setMessageInput('');
+        setRatingInput(0);
       } catch (error) {
         console.error('Error:', error);
       }
@@ -51,12 +54,12 @@ const BookCreator = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="form fade-in-left" onSubmit={handleSubmit}>
         <label> Book Title:
           <input required type="text" value ={bookTitleInput} onChange={bookTitleUpdate}></input> 
         </label>
         <label> Message:
-          <input required type="text" value={messageInput} onChange={messageInputUpdate}></input> 
+          <input required type="text" value={messageInput} onChange={messageInputUpdate} className="message-input"></input> 
         </label>
         <label> Rating:
           <input required type="number" value={ratingInput} onChange={ratingInputUpdate}></input> 

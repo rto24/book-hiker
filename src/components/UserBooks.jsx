@@ -4,7 +4,7 @@ import React, {useState, useEffect} from "react";
 
 const UserBook = ({ title, message, rating }) => {
   return (
-    <div className='user-book'>
+    <div className='user-book fade-in-right'>
       <p>Title: {title}</p>
       <p>Message: {message}</p>
       <p>Rating: {rating}</p>
