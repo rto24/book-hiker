@@ -5,9 +5,9 @@ import React, {useState, useEffect} from "react";
 const UserBook = ({ title, message, rating }) => {
   return (
     <div className='user-book fade-in-right'>
-      <p>Title: {title}</p>
-      <p>Message: {message}</p>
-      <p>Rating: {rating}</p>
+      <p><strong>Title:</strong> {title}</p>
+      <p><strong>Message:</strong> {message}</p>
+      <p><strong>Rating:</strong> {rating}</p>
     </div>
   )
 }

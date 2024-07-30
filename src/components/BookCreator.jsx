@@ -56,13 +56,13 @@ const BookCreator = () => {
     <>
       <form className="form fade-in-left" onSubmit={handleSubmit}>
         <label> Book Title:
-          <input required type="text" value ={bookTitleInput} onChange={bookTitleUpdate}></input> 
+          <input required type="text" value ={bookTitleInput} onChange={bookTitleUpdate} className="title-input"></input> 
         </label>
         <label> Message:
           <input required type="text" value={messageInput} onChange={messageInputUpdate} className="message-input"></input> 
         </label>
         <label> Rating:
-          <input required type="number" value={ratingInput} onChange={ratingInputUpdate}></input> 
+          <input required type="number" value={ratingInput} onChange={ratingInputUpdate} className="rating-input"></input> 
         </label>
         <button type={'submit'}>Add Book</button>
       </form>

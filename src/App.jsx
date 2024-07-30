@@ -1,14 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import MainContainer from './components/MainContainer';
-import BookCreator from './components/BookCreator';
+import NavBar from './components/NavBar';
+import { Route, Routes } from "react-router-dom"
+import './App.css';
 
 const App = () => {
   
   return (
+    <>
+    <NavBar />
     <div>
       <h1>BookHiker</h1>
-      <MainContainer />
+        <Routes>
+          <Route path="/" element={<MainContainer />} />
+        </Routes>
     </div>
+    </>
   )
 }
 
