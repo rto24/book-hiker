@@ -2,6 +2,7 @@
 // iterate over this data to create displays using individual UserBook components 
 import React, { useState, useEffect } from "react";
 //need to import UserBooks still
+import UserBook from "./UserBooks";
 
 const BookDisplay = () => {
     const [bookData, setBookData] = useState([]);
@@ -46,9 +47,11 @@ const BookDisplay = () => {
           const rating = obj[keys[3]]; 
 
           //pass down each constant to UserBooks when made
+          <UserBook title={title} message={message} rating={rating} key={index}/>
         })}
 
       </div>  
-    )
-    
+    )   
 }
+
+export default BookDisplay;
