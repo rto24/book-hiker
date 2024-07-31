@@ -84,14 +84,13 @@ const UserBook = ({ id, title, message, rating }) => {
     <>
     <div className='user-book fade-in-right'>
       <button onClick={() => handleClick(id)} className="book-delete">X</button>
-      <button onClick={() => toggleForm()}>Edit</button>
+      <button onClick={() => toggleForm()}>✎</button>
       <p><strong>Title:</strong> {title}</p>
       <p><strong>Message:</strong> {message}</p>
       <p><strong>Rating:</strong> {rating}</p>
     </div>
     {formVisibility && (
       <div className="update-form">
-        <button onClick={() => toggleForm()}>X</button>
         <form onSubmit={handleUpdateSubmit}>
           <label> Book Title:
             <input required type="text" value={newBookTitle} onChange={newBookTitleUpdate}/>
@@ -102,7 +101,8 @@ const UserBook = ({ id, title, message, rating }) => {
           <label> Rating:
             <input required type="text" value={newRating} onChange={newRatingUpdate}/>
           </label>
-          <button type="submit">Update</button>
+          <button className="update-btn" type="submit">Update</button>
+          <button className="close-form-btn" onClick={() => toggleForm()}>X</button>
         </form>
       </div>
     )}
