@@ -1,9 +1,11 @@
 import React from "react";
 import Spline from '@splinetool/react-spline';
+import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom"
 import ExploreAllBooks from "./ExploreAllBooks";
 import ExploreGenres from "./ExploreGenres";
 import ExploreBestSellers from "./ExploreBestSellers";
 import ExploreBooksAPI from "./ExploreBooksAPI";
+import SearchBooks from "./exploreroutes/SearchBooks";
 
 const Explore = () => {
   return (
@@ -13,7 +15,6 @@ const Explore = () => {
       <ExploreAllBooks />
       <ExploreGenres />
       <ExploreBestSellers />
-      <ExploreBooksAPI />
     </div>
     </>
   )

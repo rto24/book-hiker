@@ -58,7 +58,7 @@ body {
 
 .add-book-btn {
   border: none;
-  background-color: #4CAF50; 
+  background-color: #2563eb; 
   color: white; 
   padding: 15px 30px;
   font-size: 16px; 
@@ -68,7 +68,7 @@ body {
 }
   
 .add-book-btn:hover {
-  background-color: #45a049; 
+  background-color: #1e40af; 
   transform: scale(1.05); 
 }
 
@@ -123,6 +123,10 @@ body {
   border-radius: 10px;
   cursor: pointer;
   margin: 5px 10px 5px 10px;
+}
+
+.your-books-header {
+  margin: 10px 10px;
 }
 
 .book-display-container > h3 {

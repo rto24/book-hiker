@@ -39,7 +39,7 @@ const BookDisplay = () => {
 
     return (
       <div className='book-display-container'>
-        <h3>Your Books</h3>
+        <h1 className="your-books-header">Your Books</h1>
         {bookData.map((obj, index) => {
           const keys = Object.keys(obj);
           const id = obj[keys[0]];

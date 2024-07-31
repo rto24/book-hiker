@@ -3,6 +3,7 @@ import MainContainer from './components/MainContainer';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Explore from './components/ExploreContainer';
+import SearchBooks from './components/exploreroutes/SearchBooks';
 import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom"
 import './App.css';
 
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<MainContainer />} />
           <Route path="/homepage" element={<Home />} />
           <Route path="/explore" element={<Explore />} />
+          <Route path="/explore/all-books" element={<SearchBooks />} />
         </Routes>
     </div>
     </Router>
