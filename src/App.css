@@ -203,6 +203,22 @@ body {
   transform: scale(1.05); 
 }
 
+/* explore page */
+
+.explore-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px 250px 150px 200px;
+  width: 60%;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.explore-header {
+  text-align: center;
+  margin: 30px;
+}
+
 @keyframes fadeInFromTop {
     0% {
       opacity: 0;
