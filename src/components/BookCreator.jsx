@@ -4,13 +4,7 @@ const BookCreator = () => {
   const [bookTitleInput, setBookTitleInput] = useState('');
   const [messageInput, setMessageInput] = useState('');
   const [ratingInput, setRatingInput] = useState(0);
-//   const [bookList, setBookList] = useState([]);
 
-//   const submitHandler = (e) => {
-//     //how can we feed this into the backend? POST method?
-//     e.preventDefault();
-//     setInput('');
-//   }
   const bookTitleUpdate = (event) => {
     setBookTitleInput(event.target.value);
   }
@@ -56,13 +50,13 @@ const BookCreator = () => {
   return (
     <>
       <form className="form fade-in-left" onSubmit={handleSubmit}>
-        <label> Book Title:
+        <label> <strong>Book Title:</strong>
           <input required type="text" value ={bookTitleInput} onChange={bookTitleUpdate} className="title-input"></input> 
         </label>
-        <label> Message:
+        <label> <strong>Message:</strong>
           <input required type="text" value={messageInput} onChange={messageInputUpdate} className="message-input"></input> 
         </label>
-        <label> Rating:
+        <label> <strong>Rating:</strong>
           <input required type="number" value={ratingInput} onChange={ratingInputUpdate} className="rating-input"></input> 
         </label>
         <button type={'submit'} className="add-book-btn">Add Book</button>

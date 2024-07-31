@@ -7,12 +7,10 @@ const [fetchedBooks, setFetchedBooks] = useState([]);
 const [searchBool, setSearchBool] = useState(false);
 
   useEffect(() => {
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyCLPVcHdnZjNGc4UHqrQ4YHJ9eWRFYRDEA`)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=20&key=AIzaSyCLPVcHdnZjNGc4UHqrQ4YHJ9eWRFYRDEA`)
     .then(response => response.json())
     .then(data => {
       setFetchedBooks(data.items || []);
-    //   console.log(data.items[1].volumeInfo.title);
-    //   console.log('fetchedbooks', fetchedBooks)
     })
     .catch(error => console.log(error))
   }, [searchBool])
@@ -40,7 +38,7 @@ const [searchBool, setSearchBool] = useState(false);
       {console.log(fetchedBooks)}
       {searchBool && fetchedBooks.map((obj, index) => {
         const title = obj.volumeInfo.title;
-        const bookImg = obj.volumeInfo.imageLinks.thumbnail;
+        const bookImg = obj.volumeInfo.imageLinks.thumbnail || obj.volumeInfo.imageLinks.smallThumbnail;
         const description = obj.volumeInfo.description;
 
         return <FetchBooks title={title} bookImg={bookImg} description={description} key={index}/>
