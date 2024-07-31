@@ -21,14 +21,61 @@ const handleClick = async (id) => {
   }
 };
 
+// const handleUpdateClick
+
 const UserBook = ({ id, title, message, rating }) => {
+//form popup update
+  //edit button toggles form visibility using state
+  //create use state for title, message, rating and set initial state to those current values
+  //once update form is submitted, update state of each with whatever is currently written
+  const [formVisibility, setFormVisibility] = useState(false);
+  const [newBookTitle, setBookTitle] = useState(title);
+  const [newMessage, setMessage] = useState(message);
+  const [newRating, setRating] = useState(rating);
+
+  const toggleForm = () => {
+    setFormVisibility(!formVisibility);
+  }
+  
+  const newBookTitleUpdate = (event) => {
+    setBookTitle(event.target.value);
+  }
+
+  const newMessageUpdate = (event) => {
+    setMessage(event.target.value);
+  }
+
+  const newRatingUpdate = (event) => {
+    setRating(event.target.value);
+  }
+
   return (
+    <>
     <div className='user-book fade-in-right'>
       <button onClick={() => handleClick(id)} className="book-delete">X</button>
+      <button onClick={() => toggleForm()}>Edit</button>
       <p><strong>Title:</strong> {title}</p>
       <p><strong>Message:</strong> {message}</p>
       <p><strong>Rating:</strong> {rating}</p>
     </div>
+    {formVisibility && (
+      <div className="update-form">
+        <button onClick={() => toggleForm()}>X</button>
+        <form>
+          <label> Book Title:
+            <input required type="text" value={newBookTitle} onChange={newBookTitleUpdate}/>
+          </label>
+          <label> Message:
+            <input required type="text" value={newMessage} onChange={newMessageUpdate}/>
+          </label>
+          <label> Rating:
+            <input required type="text" value={newRating} onChange={newRatingUpdate}/>
+          </label>
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    )}
+    </>
   )
 }
 
