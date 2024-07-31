@@ -33,6 +33,12 @@ const UserBook = ({ id, title, message, rating }) => {
   const [newMessage, setMessage] = useState(message);
   const [newRating, setRating] = useState(rating);
 
+  useEffect(() => {
+    setBookTitle(title);
+    setMessage(message);
+    setRating(rating);
+  }, [title, message, rating])
+
   const toggleForm = () => {
     setFormVisibility(!formVisibility);
   }
@@ -49,6 +55,31 @@ const UserBook = ({ id, title, message, rating }) => {
     setRating(event.target.value);
   }
 
+  const handleUpdateSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch(`/api/home/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          bookTitle: newBookTitle,
+          userMessage: newMessage,
+          rating: newRating
+        })
+      })
+      if (response.ok) {
+        console.log('Book updated');
+        window.location = window.location.href;
+      } else {
+        console.log('Error', response.statusText)
+      }
+    } catch (error) {
+      console.log('Error:', error)
+    }
+  };
+
   return (
     <>
     <div className='user-book fade-in-right'>
@@ -61,7 +92,7 @@ const UserBook = ({ id, title, message, rating }) => {
     {formVisibility && (
       <div className="update-form">
         <button onClick={() => toggleForm()}>X</button>
-        <form>
+        <form onSubmit={handleUpdateSubmit}>
           <label> Book Title:
             <input required type="text" value={newBookTitle} onChange={newBookTitleUpdate}/>
           </label>

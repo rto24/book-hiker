@@ -49,6 +49,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin: auto 50px auto auto;
     max-width: 600px; 
+    background: linear-gradient(#94a3b8, #9198e5);
   }
 
 .form > label, input {
@@ -91,6 +92,7 @@ body {
   border: 1px solid black;
   width: 75%;
   margin: auto auto auto 50px;
+  border-radius: 8px;
 }
 
 .user-book {

@@ -14,4 +14,8 @@ router.delete('/:id', userController.deleteBook, (req, res) => {
   return res.status(200).json(res.locals.deleted);
 })
 
+router.put('/:id', userController.updateBook, (req, res) => {
+  return res.status(200).json(res.locals.updatedBook);
+})
+
 module.exports = router;

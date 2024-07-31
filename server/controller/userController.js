@@ -52,13 +52,17 @@ userController.deleteBook = (req, res, next) => {
 
 userController.updateBook = (req, res, next) => {
   const bookId = req.params.id;
-  const { newBookTitle, newMessage, newRating } = req.body;
-  Book.findOne({_id: bookId})
-    .then(updateBook => {
-      updateBook.bookTitle = newBookTitle;
-      updateBook.userMessage = newMessage;
-      updateBook.rating = newRating;
-      console.log(updateBook);
+  // const newBookTitle = req.body.bookTitle;
+  // const newMessage = req.body.userMessage;
+  // const newRating = req.body.rating;
+  const { bookTitle, userMessage, rating } = req.body
+  Book.updateOne({_id: bookId}, {bookTitle, userMessage, rating})
+    .then(updatedBook => {
+      res.locals.updatedBook = updatedBook;
+      // updatedBook.bookTitle = newBookTitle;
+      // updatedBook.userMessage = newMessage;
+      // updatedBook.rating = newRating;
+      console.log(updatedBook);
       return next()
     })
     .catch(err => {
