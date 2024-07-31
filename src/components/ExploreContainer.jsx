@@ -2,6 +2,8 @@ import React from "react";
 import Spline from '@splinetool/react-spline';
 import ExploreAllBooks from "./ExploreAllBooks";
 import ExploreGenres from "./ExploreGenres";
+import ExploreBestSellers from "./ExploreBestSellers";
+import ExploreBooksAPI from "./ExploreBooksAPI";
 
 const Explore = () => {
   return (
@@ -10,6 +12,8 @@ const Explore = () => {
     <div className="explore-container">
       <ExploreAllBooks />
       <ExploreGenres />
+      <ExploreBestSellers />
+      <ExploreBooksAPI />
     </div>
     </>
   )
