@@ -29,7 +29,8 @@ mongoose.connect(MONGO_URI, {
   const Book = mongoose.model('book', bookNotesSchema);
 
   const planToReadSchema = new Schema({
-    bookTitle: {type: String, require: true}
+    planToRead: {type: String, require: true},
+    bookImg: String
   })
 
   const PlanToRead = mongoose.model('ptr', planToReadSchema);
