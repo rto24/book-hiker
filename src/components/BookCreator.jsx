@@ -47,6 +47,7 @@ const BookCreator = () => {
         setBookTitleInput('');
         setMessageInput('');
         setRatingInput(0);
+        window.location = window.location.href;
       } catch (error) {
         console.error('Error:', error);
       }

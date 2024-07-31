@@ -12,6 +12,7 @@ const handleClick = async (id) => {
     })
     if (response.ok) {
       console.log('Book deleted');
+      window.location = window.location.href;
     } else {
       console.log('Error uhoh', response.statusText);
     }

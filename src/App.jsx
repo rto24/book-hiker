@@ -13,8 +13,8 @@ const App = () => {
     <div>
       {/* <h1>BookHiker</h1> */}
         <Routes>
-          <Route path="/" element={<MainContainer />} />
-          <Route path="/homepage" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/homepage" element={<MainContainer />} />
         </Routes>
     </div>
     </Router>
