@@ -50,4 +50,24 @@ userController.deleteBook = (req, res, next) => {
     })  
 }
 
+userController.updateBook = (req, res, next) => {
+  const bookId = req.params.id;
+  const { newBookTitle, newMessage, newRating } = req.body;
+  Book.findOne({_id: bookId})
+    .then(updateBook => {
+      updateBook.bookTitle = newBookTitle;
+      updateBook.userMessage = newMessage;
+      updateBook.rating = newRating;
+      console.log(updateBook);
+      return next()
+    })
+    .catch(err => {
+      return next({
+        log: `userController.deleteBook: ERROR: ${err}`,
+        message: { err: `Error occurred at userController.deleteBook` },
+        status: 500
+      })
+    })  
+}
+
 module.exports = userController;
