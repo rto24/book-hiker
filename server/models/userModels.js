@@ -28,7 +28,14 @@ mongoose.connect(MONGO_URI, {
 
   const Book = mongoose.model('book', bookNotesSchema);
 
+  const planToReadSchema = new Schema({
+    bookTitle: {type: String, require: true}
+  })
+
+  const PlanToRead = mongoose.model('ptr', planToReadSchema);
+
   module.exports = {
     User,
-    Book
+    Book,
+    PlanToRead
   };
