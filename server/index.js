@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 const homeRouter = require('./routes/userRoutes');
+const exploreRouter = require('./routes/exploreRoutes')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/home', homeRouter); // home is when the user first logs in
+app.use('/api/explore', exploreRouter)
 
 app.listen(port, function () {
   console.log('App listening on port: ' + port);
