@@ -65,7 +65,7 @@ const BookCreator = () => {
         <label> Rating:
           <input required type="number" value={ratingInput} onChange={ratingInputUpdate} className="rating-input"></input> 
         </label>
-        <button type={'submit'}>Add Book</button>
+        <button type={'submit'} className="add-book-btn">Add Book</button>
       </form>
     </>
   )

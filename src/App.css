@@ -42,18 +42,34 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ccc; /* Light border color */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Add some padding inside the form */
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin: auto 50px auto auto;
-    max-width: 600px; /* Limit form width */
+    max-width: 600px; 
   }
 
 .form > label, input {
  margin: 10px;
 }
+
+.add-book-btn {
+    border: none;
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 15px 30px;
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+  }
+  
+  .add-book-btn:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+  }
 
 .message-input {
   width: 400px;
@@ -78,18 +94,18 @@ body {
 }
 
 .user-book {
-    border: 1px solid #ccc; /* Light border color */
+    border: 1px solid #ccc; 
     margin: 10px;
-    width: 90%; /* Full width of its container */
+    width: 90%; 
     padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    background-color: #fff; /* White background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease; 
   }
   
   .user-book:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Glowing effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
   }
 
   .user-book > p {
@@ -107,10 +123,6 @@ body {
 .book-display-container > h3 {
   margin: 10px;
 }
-
-/* .home-spline {
-  position: absolute;
-} */
 
 .home-header {
     position: absolute;
@@ -135,7 +147,21 @@ body {
     opacity: 0; 
     animation: fadeInFromBottom 2s forwards; 
   }
-  
+
+.lib-header {
+  position: absolute;
+  left: 40%;
+  transform: translate(-50%, 50px); 
+  font-size: 50px;
+  animation: fadeInFromTop 2s forwards;
+}
+
+.blobs {
+  z-index: -1;
+  position: absolute;
+  animation: fadeInFromBottom 2s forwards; 
+}
+
 /* transitions */
 
 @keyframes fadeInFromTop {
