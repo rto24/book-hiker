@@ -38,39 +38,39 @@ body {
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    padding: 20px; 
-    background-color: #f9f9f9; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    margin: auto 50px auto auto;
-    max-width: 600px; 
-    background: linear-gradient(#94a3b8, #9198e5);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: auto 50px auto auto;
+  max-width: 600px; 
+  background: linear-gradient(#94a3b8, #9198e5);
+}
 
 .form > label, input {
  margin: 10px;
 }
 
 .add-book-btn {
-    border: none;
-    background-color: #4CAF50; 
-    color: white; 
-    padding: 15px 30px;
-    font-size: 16px; 
-    cursor: pointer; 
-    border-radius: 5px; 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-  }
+  border: none;
+  background-color: #4CAF50; 
+  color: white; 
+  padding: 15px 30px;
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
   
-  .add-book-btn:hover {
-    background-color: #45a049; 
-    transform: scale(1.05); 
-  }
+.add-book-btn:hover {
+  background-color: #45a049; 
+  transform: scale(1.05); 
+}
 
 .message-input {
   width: 400px;
@@ -96,23 +96,23 @@ body {
 }
 
 .user-book {
-    border: 1px solid #ccc; 
-    margin: 10px;
-    width: 90%; 
-    padding: 20px;
-    border-radius: 8px; 
-    background-color: #fff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: box-shadow 0.3s ease; 
-  }
+  border: 1px solid #ccc; 
+  margin: 10px;
+  width: 90%; 
+  padding: 20px;
+  border-radius: 8px; 
+  background-color: #fff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease; 
+}
   
-  .user-book:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-  }
+.user-book:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
 
-  .user-book > p {
-    margin: 10px;
-  }
+.user-book > p {
+  margin: 10px;
+}
 
 .user-book > button {
   width: 20px;
@@ -120,6 +120,7 @@ body {
   border-style: none;
   border-radius: 50px;
   cursor: pointer;
+  margin: 5px 10px 5px 10px;
 }
 
 .book-display-container > h3 {
@@ -127,28 +128,28 @@ body {
 }
 
 .home-header {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50%, -50px); 
-    z-index: 100;
-    font-size: 100px;
-    color: #0f172a;
-    opacity: 0; 
-    animation: fadeInFromTop 2s forwards; 
-  }
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50px); 
+  z-index: 100;
+  font-size: 100px;
+  color: #0f172a;
+  opacity: 0; 
+  animation: fadeInFromTop 2s forwards; 
+}
   
-  .home-subtext {
-    position: absolute;
-    top: 55%; 
-    left: 30%;
-    transform: translate(-50%, 50px); 
-    z-index: 100;
-    font-size: 50px;
-    color: #1e293b;
-    opacity: 0; 
-    animation: fadeInFromBottom 2s forwards; 
-  }
+.home-subtext {
+  position: absolute;
+  top: 55%; 
+  left: 30%;
+  transform: translate(-50%, 50px); 
+  z-index: 100;
+  font-size: 50px;
+  color: #1e293b;
+  opacity: 0; 
+  animation: fadeInFromBottom 2s forwards; 
+}
 
 .lib-header {
   position: absolute;
@@ -164,7 +165,43 @@ body {
   animation: fadeInFromBottom 2s forwards; 
 }
 
-/* transitions */
+.update-form {
+  display: flex;
+  text-align: center;
+}
+
+.update-btn {
+  border: none;
+  background-color: #2563eb; 
+  color: white; 
+  padding: 15px 30px;
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  margin-right: 20px;
+}
+
+.update-btn:hover {
+  background-color: #1e40af; 
+  transform: scale(1.05); 
+}
+
+.close-form-btn {
+  border: none;
+  background-color: #94a3b8; 
+  color: white; 
+  padding: 15px 30px;
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.close-form-btn:hover {
+  background-color: #f87171; 
+  transform: scale(1.05); 
+}
 
 @keyframes fadeInFromTop {
     0% {
@@ -189,26 +226,26 @@ body {
 }
 
 @keyframes fadeInFromLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-50%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
   
-  @keyframes fadeInFromRight {
-    0% {
-      opacity: 0;
-      transform: translateX(50%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
   
   .fade-in-left {
     opacity: 0;
