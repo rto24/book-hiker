@@ -33,4 +33,21 @@ userController.postBookNotes = (req, res, next) => {
     })  
 }
 
+userController.deleteBook = (req, res, next) => {
+  const bookId = req.params.id
+  Book.deleteOne({ _id: bookId })
+    .then(deletedBook => {
+      res.locals.deleted = deletedBook;
+      console.log(deletedBook);
+      return next()
+    })
+    .catch(err => {
+      return next({
+        log: `userController.deleteBook: ERROR: ${err}`,
+        message: { err: `Error occurred at userController.deleteBook` },
+        status: 500
+      })
+    })  
+}
+
 module.exports = userController;

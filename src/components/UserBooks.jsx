@@ -2,9 +2,9 @@
 //look at market file from Unit 10
 import React, {useState, useEffect} from "react";
 
-const handleClick = async (event) => {
+const handleClick = async (id) => {
   try {
-    const response = await fetch("/api/home", {
+    const response = await fetch(`/api/home/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -20,10 +20,10 @@ const handleClick = async (event) => {
   }
 };
 
-const UserBook = ({ title, message, rating }) => {
+const UserBook = ({ id, title, message, rating }) => {
   return (
     <div className='user-book fade-in-right'>
-      <button onClick={handleClick} className="book-delete">X</button>
+      <button onClick={() => handleClick(id)} className="book-delete">X</button>
       <p><strong>Title:</strong> {title}</p>
       <p><strong>Message:</strong> {message}</p>
       <p><strong>Rating:</strong> {rating}</p>

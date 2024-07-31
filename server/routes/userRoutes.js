@@ -10,4 +10,8 @@ router.post('/', userController.postBookNotes, (req, res) => {
   return res.status(200).json(res.locals.userCollection);
 })
 
+router.delete('/:id', userController.deleteBook, (req, res) => {
+  return res.status(200).json(res.locals.deleted);
+})
+
 module.exports = router;

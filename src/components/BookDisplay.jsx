@@ -42,12 +42,13 @@ const BookDisplay = () => {
         <h3>Your Books</h3>
         {bookData.map((obj, index) => {
           const keys = Object.keys(obj);
+          const id = obj[keys[0]];
           const title = obj[keys[1]];
           const message = obj[keys[2]];
           const rating = obj[keys[3]]; 
 
           //pass down each constant to UserBooks when made
-          return <UserBook title={title} message={message} rating={rating} key={index}/>
+          return <UserBook id={id} title={title} message={message} rating={rating} key={index}/>
         })}
 
       </div>  
