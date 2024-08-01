@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import User from "./components/Users";
+import User from "./Users";
 
 const ExploreUsers = () => {
   const [userData, setUserData] = useState([]);
@@ -43,7 +43,7 @@ const ExploreUsers = () => {
         const lastName = obj[keys[2]];
         const userName = obj[keys[3]];
 
-        return <User id={id} firstName={firstName} lastName={lastName} userName={userName}/>
+        return <User id={id} firstName={firstName} lastName={lastName} userName={userName} key={index}/>
       })}
     </div>
     </>
