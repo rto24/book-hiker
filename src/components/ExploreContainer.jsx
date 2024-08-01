@@ -3,6 +3,7 @@ import Spline from '@splinetool/react-spline';
 import ExploreAllBooks from "./ExploreAllBooks";
 import ExploreGenres from "./ExploreGenres";
 import ExploreBestSellers from "./ExploreBestSellers";
+import ExploreConnects from "./ExploreConnects";
 
 const Explore = () => {
   return (
@@ -12,6 +13,7 @@ const Explore = () => {
       <ExploreAllBooks />
       <ExploreGenres />
       <ExploreBestSellers />
+      <ExploreConnects />
     </div>
     </>
   )

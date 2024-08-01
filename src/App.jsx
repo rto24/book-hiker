@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Explore from './components/ExploreContainer';
 import SearchBooks from './components/exploreroutes/SearchBooks';
 import PlanToReadList from './components/PlanToRead';
+import ExploreUsers from './ExploreUsers';
 import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom"
 import './App.css';
 
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/explore" element={<Explore />} />
           <Route path="/plan-to-read" element={<PlanToReadList />} />
           <Route path="/explore/all-books" element={<SearchBooks />} />
+          <Route path="/explore/all-users" element={<ExploreUsers />}/>
         </Routes>
     </div>
     </Router>
