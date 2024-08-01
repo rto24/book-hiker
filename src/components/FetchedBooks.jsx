@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 
 const FetchBooks = ({ title, bookImg, description }) => {
+  const [active, setActive] = useState('');
+
   const handleStar = async (event) => {
     event.preventDefault();
     try {
@@ -17,6 +19,7 @@ const FetchBooks = ({ title, bookImg, description }) => {
       if (response.ok) {
         const data = await response.json();
         console.log('Sucessful POST', data);
+        setActive('active');
       } else {
         console.log('Error', response.statusText);
       }
@@ -27,7 +30,7 @@ const FetchBooks = ({ title, bookImg, description }) => {
 
   return (
     <div className="fetched-book">
-      <button onClick={handleStar} className="plan-to-read-btn">☆</button>
+      <button onClick={handleStar} className={`plan-to-read-btn ${active}`}>☆</button>
       <h1>{title}</h1>
       <img src={`${bookImg}`} alt="" className="book-img"/>
       <p>{description}</p>

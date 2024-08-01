@@ -341,8 +341,12 @@ body {
   font-size: 16px; 
   cursor: pointer; 
   border-radius: 5px; 
-  transition: background-color 0.3s ease, transform 0.3s ease; 
+  transition: background-color 0.3s ease;
   margin-bottom: 15px;
+}
+
+.ptr-delete-btn.active {
+  background-color: #f87171;
 }
 
 /* search bar in explore */
@@ -428,7 +432,7 @@ body {
   transition: background-color 0.3s ease
 }
 
-.plan-to-read-btn:focus {
+.plan-to-read-btn.active {
   background-color: #4ade80;
 }
 

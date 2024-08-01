@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 
 const PlanToReadBooks = ({ id, title, bookImg }) => {
+  const [active, setActive] = useState('');
+
   const handleDelete = async (id) => {
     try {
       const response = await fetch(`/api/explore/${id}`, {
@@ -11,7 +13,7 @@ const PlanToReadBooks = ({ id, title, bookImg }) => {
       })
       if (response.ok) {
         console.log('Book deleted');
-        alert('Book deleted!')
+        setActive('active');
       } else {
         console.log('Error', response.statusText);
       }
@@ -24,7 +26,7 @@ const PlanToReadBooks = ({ id, title, bookImg }) => {
     <div className="ptrBook">
       <h2 className="ptr-book-title">{title}</h2>
       <img src={`${bookImg}`} alt="" className="book-img"/>
-      <button onClick={() => handleDelete(id)} className="ptr-delete-btn">X</button>
+      <button onClick={() => handleDelete(id)} className={`ptr-delete-btn ${active}`}>X</button>
     </div>
   )
 }
