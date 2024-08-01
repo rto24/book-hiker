@@ -6,4 +6,8 @@ router.get('/', exploreController.getPlanToReadBooks, (req, res) => {
   return res.status(200).json(res.locals.book);
 });
 
+router.post('/', exploreController.postPlanToReadBooks, (req, res) => {
+  return res.status(200).json(res.locals.book);
+})
+
 module.exports = router;
