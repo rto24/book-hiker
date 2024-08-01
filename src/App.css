@@ -284,11 +284,6 @@ body {
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4); 
 }
 
-/* .fetched-books-container {
-  overflow-y: auto;
-  max-height: 800px;
-} */
-
 .ptr-main-header {
   text-align: center;
   margin: 30px;
@@ -437,6 +432,18 @@ body {
 }
 
 /* connect with users page */
+.explore-connects {
+  grid-column: 1 / 3;
+  background: linear-gradient(#a78bfa, #dedcff);
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4); 
+  animation: fadeInFromRight 1s forwards;
+}
+
+.explore-connects-header {
+  padding: 20px;
+}
+
 .connect-header {
   text-align: center;
   margin: 30px;
@@ -472,6 +479,55 @@ body {
 .user-last-name {
   color: #dedcff;
   margin: 10px;
+}
+
+/* signup page */
+
+.signup-header {
+  text-align: center;
+  margin: 30px;
+  font-size: 50px;
+  animation: fadeInFromTop 1s forwards;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; 
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4); 
+  margin: auto;
+  max-width: 600px; 
+  height: 500px;
+  animation: fadeInFromTop 1s forwards;
+  background: linear-gradient(black 10%, 70%, #dedcff 95%);
+}
+
+.first-name-input,
+.last-name-input,
+.user-name-input {
+  width: 300px;
+  height: 20px;
+  margin-top: 40px;
+}
+
+.signup-form > label {
+  color: #dedcff;
+}
+
+.signup-btn {
+  border: none;
+  background-color: #2563eb; 
+  color: white; 
+  padding: 15px 30px;
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  margin-top: 100px;
 }
 
 @keyframes fadeInFromTop {

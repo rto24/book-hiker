@@ -46,6 +46,8 @@ const UserCreator = () => {
   }
 
   return (
+    <>
+    <h1 className="signup-header">Sign up to get started</h1>
     <form className="signup-form" onSubmit={handleSubmit}>
       <label><strong>First Name: </strong>
         <input required type="text" value={firstNameInput} onChange={firstNameUpdate} className="first-name-input"/>
@@ -58,6 +60,7 @@ const UserCreator = () => {
       </label>
       <button type="submit" className="signup-btn">Sign Up</button>
     </form>
+    </>
   )
 }
 

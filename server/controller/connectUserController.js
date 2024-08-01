@@ -20,8 +20,8 @@ connectUserController.getUsers = (req, res, next) => {
 connectUserController.postUsers = (req, res, next) => {
   const { firstName, lastName, username } = req.body;
   User.create({ firstName, lastName, username })
-    .then(user => {
-      res.locals.user = user;
+    .then(users => {
+      res.locals.user = users;
       return next();
     })
     .catch(err => {
