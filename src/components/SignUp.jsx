@@ -17,10 +17,36 @@ const UserCreator = () => {
     setUserName(event.target.value);
   }
 
-
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch("/api/users", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: firstNameInput,
+          lastName: lastNameInput,
+          username: userNameInput
+        })
+      });
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Successful POST', data);
+      } else {
+        console.log('Error', response.statusText);
+      }
+      setFirstName('');
+      setLastName('');
+      setUserName('');
+    } catch (error) {
+      console.error('Error', error);
+    }
+  }
 
   return (
-    <form className="signup-form">
+    <form className="signup-form" onSubmit={handleSubmit}>
       <label><strong>First Name: </strong>
         <input required type="text" value={firstNameInput} onChange={firstNameUpdate} className="first-name-input"/>
       </label>
@@ -30,6 +56,7 @@ const UserCreator = () => {
       <label><strong>Username: </strong>
         <input required type="text" value={userNameInput} onChange={userNameUpdate} className="user-name-input"/>
       </label>
+      <button type="submit" className="signup-btn">Sign Up</button>
     </form>
   )
 }
