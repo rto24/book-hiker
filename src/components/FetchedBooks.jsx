@@ -26,10 +26,10 @@ const FetchBooks = ({ title, bookImg, description }) => {
   }
 
   return (
-    <div className="fetched-book-container">
+    <div className="fetched-book">
       <button onClick={handleStar} className="plan-to-read-btn">☆</button>
       <h1>{title}</h1>
-      <img src={`${bookImg}`} alt="" />
+      <img src={`${bookImg}`} alt="" className="book-img"/>
       <p>{description}</p>
     </div>
   )

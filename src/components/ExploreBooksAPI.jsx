@@ -28,7 +28,7 @@ const [searchBool, setSearchBool] = useState(false);
   return (
     <>
     <div className="search-bar">
-      <label> Search:
+      <label> 
         <input type="text" value={search} onChange={searchUpdate} placeholder='Search for a book...'/>
       </label>
       <button onClick={toggleSearchBool}>Search</button>

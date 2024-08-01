@@ -6,7 +6,7 @@ const ExploreAllBooks = () => {
     <div className="explore-all">
       <h1 className="explore-all-header">Go on a journey and find more books here</h1>
       <button className="arrow-btn">
-        <Link to="/explore/all-books">→</Link>
+        <Link style={{textDecoration:'none'}}to="/explore/all-books">→</Link>
       </button>
     </div>
   )
