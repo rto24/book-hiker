@@ -33,4 +33,20 @@ exploreController.postPlanToReadBooks = (req, res, next) => {
     })  
 }
 
+exploreController.deletePlanToReadBooks = (req, res, next) => {
+  const bookId = req.params.id;
+  PlanToRead.deleteOne({ _id: bookId })
+    .then(deletedBook => {
+      res.locals.deleted = deletedBook;
+      return next();
+    })
+    .catch(err => {
+        return next({
+          log: `userController.deleteBook: ERROR: ${err}`,
+          message: { err: `Error occurred at userController.deleteBook` },
+          status: 500
+        })
+    })  
+}
+
 module.exports = exploreController;

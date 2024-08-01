@@ -10,4 +10,8 @@ router.post('/', exploreController.postPlanToReadBooks, (req, res) => {
   return res.status(200).json(res.locals.book);
 })
 
+router.delete('/:id', exploreController.deletePlanToReadBooks, (req, res) => {
+  return res.status(200).json(res.locals.deleted);
+})
+
 module.exports = router;

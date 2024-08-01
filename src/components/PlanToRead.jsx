@@ -36,14 +36,15 @@ const PlanToReadList = () => {
 
   return (
     <>
-    <h1 className="ptr-main-header">What to read next?</h1>
+    <h1 className="ptr-main-header">Next on the list</h1>
     <div className="plan-to-read-container">
       {planToReadData.map((obj, index) => {
         const keys = Object.keys(obj);
+        const id = obj[keys[0]];
         const title = obj[keys[1]];
         const img = obj[keys[2]];
 
-        return <PlanToReadBooks title={title} bookImg={img} key={index}/> //may need to make a new component, fetch books still has the button attached
+        return <PlanToReadBooks id={id} title={title} bookImg={img} key={index}/> //may need to make a new component, fetch books still has the button attached
       })}
     </div>
     </>
