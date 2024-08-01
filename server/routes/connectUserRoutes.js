@@ -6,4 +6,8 @@ router.get('/', connectUserController.getUsers, (req, res) => {
   return res.status(200).json(res.locals.user);
 })
 
+router.post('/', connectUserController.postUsers, (req, res) => {
+  return res.status(200).json(res.locals.user);
+})
+
 module.exports = router;
