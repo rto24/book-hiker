@@ -30,7 +30,7 @@ const ExploreUsers = () => {
   }, []);
 
   if (loading) return <p></p>; 
-  if (bookData.length === 0) return <p>No data available</p>;
+  if (userData.length === 0) return <p>No data available</p>;
 
   return (
     <>
