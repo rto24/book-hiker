@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from "react";
 import FetchBooks from "./FetchedBooks";
+import PlanToReadBooks from "./PlanToReadBooks";
 
 const PlanToReadList = () => {
   const [ planToReadData, setPlanToReadData ] = useState([]);
@@ -40,7 +41,7 @@ const PlanToReadList = () => {
         const title = obj[keys[1]];
         const img = obj[keys[2]];
 
-        return <FetchBooks title={title} bookImg={img} key={index}/> //may need to make a new component, fetch books still has the button attached
+        return <PlanToReadBooks title={title} bookImg={img} key={index}/> //may need to make a new component, fetch books still has the button attached
       })}
     </div>
   )
