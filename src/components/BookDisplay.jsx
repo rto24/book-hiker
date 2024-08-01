@@ -31,7 +31,7 @@ const BookDisplay = () => {
       fetchData();
     }, []);
   
-    if (loading) return <p>Loading...</p>; 
+    if (loading) return <p></p>; 
     if (bookData.length === 0) return <p>No data available</p>;
 
     return (

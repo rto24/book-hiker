@@ -31,10 +31,12 @@ const PlanToReadList = () => {
     fetchData();
   }, []);
 
-  if (loading) return <p>Loading...</p>; 
+  if (loading) return <p></p>; 
   if (planToReadData.length === 0) return <p>No data available</p>;
 
   return (
+    <>
+    <h1 className="ptr-main-header">What to read next?</h1>
     <div className="plan-to-read-container">
       {planToReadData.map((obj, index) => {
         const keys = Object.keys(obj);
@@ -44,6 +46,7 @@ const PlanToReadList = () => {
         return <PlanToReadBooks title={title} bookImg={img} key={index}/> //may need to make a new component, fetch books still has the button attached
       })}
     </div>
+    </>
   )
 }
 
